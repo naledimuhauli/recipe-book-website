@@ -1,5 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RecipeList from './recipe-list';
+
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
      <p className='paragraph1'>By Siphokazi and Wakhekile</p>
     </div>
     </div>
+    <RecipeList />
     </>
   );
 }
