@@ -49,7 +49,7 @@ const RecipeList = () => {
 
     return (
         <div className='container hero'>
-            <h1 className='class-list'>Recipe List</h1>
+            <h1 className='class-list'>Recipes List</h1>
             <div className='savoury-list'>
                 <h1 className='savoury-dishes'>Savoury Dishes</h1>
                 <div className='savoury'>

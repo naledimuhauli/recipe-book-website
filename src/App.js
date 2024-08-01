@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import RecipeList from './recipe-list';
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
+import Footer from './Footer';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
     </div>
     <AboutUs />
     <RecipeList />
+    <Footer />
+    
     </>
   );
 }

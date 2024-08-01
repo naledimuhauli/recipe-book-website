@@ -19,4 +19,22 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
+  .footer{
+     background-color: rgb(109, 119, 18);
+     color: rgb(0, 0, 0);
+     max-width: 100%;
+  }
+
+  .nav-link{
+    color: white;
+  }
+
+  .delights{
+    color: white;
+  }
   
+  .cook-book{
+    mix-blend-mode: multiply;
+    width: 100px;
+    height: 80px;
+  }
