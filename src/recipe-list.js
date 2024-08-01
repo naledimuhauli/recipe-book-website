@@ -2,58 +2,46 @@ import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const RecipeList = () =>{
 
-     // State for savoury recipes
-    const [savouryRecipes, setSavouryRecipes] = useState([
+
+const RecipeList = () => {
+    // State for savoury recipes
+    const [savouryRecipes] = useState([
         {
             title: 'Spaghetti Carbonara',
             description: 'A classic Italian pasta dish.',
-            ingredients: 'Spaghetti, Eggs, Pancetta, Parmesan cheese, Pepper',
-            steps: 'Cook pasta, mix with sauce, and serve.',
-            pictureUrl: 'https://example.com/spaghetti.jpg'
+            pictureUrl: ''
         },
         {
-            title: 'Grilled Chicken Salad',
-            description: 'A healthy and delicious salad with grilled chicken.',
-            ingredients: 'Chicken, Lettuce, Tomatoes, Cucumber, Olive oil, Lemon juice',
-            steps: 'Grill chicken, mix with salad ingredients, and serve.',
-            pictureUrl: 'https://example.com/chicken_salad.jpg'
+            title: 'Chicken Curry',
+            description: 'A spicy and flavorful chicken curry.',
+            pictureUrl: 'https://example.com/chicken_curry.jpg'
         },
         {
-            title: 'Grilled Chicken Salad',
+            title: 'Pork Ribs',
             description: 'A healthy and delicious salad with grilled chicken.',
-            ingredients: 'Chicken, Lettuce, Tomatoes, Cucumber, Olive oil, Lemon juice',
-            steps: 'Grill chicken, mix with salad ingredients, and serve.',
             pictureUrl: 'https://example.com/chicken_salad.jpg'
         }
     ]);
 
     // State for sweet recipes
-    const [sweetRecipes, setSweetRecipes] = useState([
+    const [sweetRecipes] = useState([
         {
             title: 'Chocolate Chip Cookies',
             description: 'Delicious cookies with chocolate chips.',
-            ingredients: 'Flour, Butter, Sugar, Chocolate chips',
-            steps: 'Mix ingredients, bake, and enjoy.',
             pictureUrl: 'https://example.com/cookies.jpg'
         },
         {
             title: 'Cheesecake',
             description: 'A rich and creamy cheesecake.',
-            ingredients: 'Cream cheese, Sugar, Eggs, Vanilla extract, Graham crackers',
-            steps: 'Mix ingredients, bake, and chill.',
             pictureUrl: 'https://example.com/cheesecake.jpg'
         },
         {
-            title: 'Cheesecake',
-            description: 'A rich and creamy cheesecake.',
-            ingredients: 'Cream cheese, Sugar, Eggs, Vanilla extract, Graham crackers',
-            steps: 'Mix ingredients, bake, and chill.',
-            pictureUrl: 'https://example.com/cheesecake.jpg'
+            title: 'Tiramisu',
+            description: 'A classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.',
+            pictureUrl: 'https://example.com/tiramisu.jpg'
         }
     ]);
-
 
 
     return (
