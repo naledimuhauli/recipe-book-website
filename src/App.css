@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ html, body {
   background-size: cover;
 }
 
-.header .heading1{
+.header .heading1 {
   color: white;
   font-size: 150px;
   font-weight: 900;
@@ -21,7 +22,7 @@ html, body {
   padding-bottom: 50px;
 }
 
-.header .paragraph1{
+.header .paragraph1 {
   color: rgb(102, 102, 121);
   font-size: 35px;
   margin: 0px 50px 0 0;
@@ -31,55 +32,86 @@ html, body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-@media (max-width: 900px){
-  .header .heading1{
+@media (max-width: 900px) {
+  .header .heading1 {
     font-size: 80px;
   }
-  .header .paragraph1{
+
+  .header .paragraph1 {
     font-size: 40px;
   }
-  .App{
+
+  .App {
     background-size: cover;
   }
 }
 
 .hero {
-  background-color: rgb(92, 109, 19);
+  background-color: rgb(8, 8, 8);
   color: rgb(255, 255, 255);
   min-width: 100%;
-  
+
 }
-.class-list{
+
+.class-list {
   color: rgb(250, 250, 250);
   text-align: center;
   font-size: 60px;
   font-weight: 900;
   padding-top: 30px;
-  
+
 }
-.savoury-dishes{
-  color: rgb(17, 17, 17);
+
+.savoury-dishes {
+  color: rgb(214, 212, 212);
   text-decoration: underline;
   text-align: center;
-  padding: 10px 0;
+  padding: 50px 0;
   font-size: 40px;
 
 }
-.savoury{
+
+.savoury {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   margin-bottom: 40px;
-  margin: 0 40px;
+  margin: 0 30px;
 }
-.row{
-  border: 1px solid black;
-  box-shadow: 0px 4px 15px rgba(253, 253, 251, 0.5); 
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  margin: 10px;
+.savoury-h1{
+  font-size: 30px;
+  padding-top: 5px;
+}
+.savoury-p{
   align-items: center;
+  font-size: 20px;
+  color: rgb(139, 136, 136);
+}
+
+.row {
+  border: 1px solid black;
+  box-shadow: 0px 4px 15px rgba(214, 196, 79, 0.5);
+  text-align: center;
   justify-content: center;
-  background-color: rgb(14, 13, 13); 
+
+  border-radius: 10px;
+  background-color: rgb(14, 13, 13);
+}
+.recipe-img{
+  height: 200px;
+  width: 250px;
+
+  
+}
+.savoury-btn{
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  box-shadow: 0px 4px 15px rgba(214, 196, 79, 0.5);
+  margin: 10px;
+  padding: 2px;
+  width: 200px;
+  height: 30px;
+  
+
 }
