@@ -54,7 +54,7 @@ const RecipeList = () => {
                 <h1 className='savoury-dishes'>Savoury Dishes</h1>
                 <div className='savoury'>
                     {savouryRecipes.map((recipe, index) => (
-                        <div className='row'>
+                        <div className='row row-recipe'>
                             <div className='col' key={index}>
                                 <h3 className='savoury-h1'>{recipe.title}</h3>
                                 <p className='savoury-p'>{recipe.description}</p>
@@ -69,7 +69,7 @@ const RecipeList = () => {
                 <h1 className='savoury-dishes'>Sweet Dishes</h1>
                 <div className='savoury'>
                     {sweetRecipes.map((recipe, index) => (
-                        <div className='row'>
+                        <div className='row row-recipe'>
                             <div className='col' key={index}>
                                 <h3 className='savoury-h1'>{recipe.title}</h3>
                                 <p className='savoury-p'>{recipe.description}</p>

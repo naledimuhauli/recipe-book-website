@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Navbar />
       <div className='header'>
-     <h1 className='heading1'>Cooking <br/> Book</h1>
+     <h1 className='heading1'>CookBook <br/> Delights</h1>
      <p className='paragraph1'>By Siphokazi and Wakhekile</p>
     </div>
     </div>
