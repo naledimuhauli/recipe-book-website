@@ -1,17 +1,30 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import RecipeDetails from './RecipeDetails';
-import './App.css'
+import { useParams } from 'react-router-dom';
+import { recipes } from '.recipe-list';
+import './App.css';
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/recipe/:id" element={<RecipeDetails />} />
-      </Routes>
-    </Router>
-  );
-}
+const recipeDetails = () => {
+    const { recipeDetails } = useParams();
+    const recipeDetails = recipes[recipeDetails];
 
-export default App;
+    return (
+        <div>
+            <h1>{recipeDetails.chart(0).toUppercase() + recipeDetails.slice(1)} Recipes</h1>
+            < div className="recipe-container">
+                {recipeDetails.map(recipe =>(
+                    <div key={recipe.id} className="recipe.card">
+                        <h2>{recipe.name}</h2>
+                        <img src={recipe.image} alt={recipe.name} className="recipe.image"></img>
+                        <h3>Short Description</h3>
+                        <p>{recipe.description}</p>
+                        <h3>Steps:</h3>
+                        <p>{recipe.instructions}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+
+};
+
+export default RecipeDetails
