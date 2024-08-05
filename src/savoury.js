@@ -1,7 +1,9 @@
 import './recipe-list';
 import React, { useState } from 'react';
 import './App.css';
-import savoury1 from './images/savoury1.jpg'
+import savoury1 from './images/savoury1.jpg';
+import savoury2 from './images/savoury2.jpg';
+import savoury3 from './images/savoury3.jpg';
 
 const SavouryDishes = () => {
     const [savoury] = useState([
@@ -50,7 +52,9 @@ const SavouryDishes = () => {
         </div>
    
 
-export default SavouryDishes)
+    )
 }
+
+export default SavouryDishes
 
 

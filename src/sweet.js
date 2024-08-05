@@ -1,4 +1,4 @@
-import './Recipe-list';
+import './recipe-list';
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './App.css';
