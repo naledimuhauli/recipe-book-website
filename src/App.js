@@ -6,6 +6,8 @@ import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import RecipeList from './recipe-list';
 import RecipeDetail from './RecipeDetails';
+import SavouryRecipes from './recipe-list';
+import SweetRecipes from './recipe-list';
 import Footer from './Footer';
 
 function Home() {
@@ -33,6 +35,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipe/:type/:index" element={<RecipeDetail />} />
+        <Route path="/savoury-recipes" element={<SavouryRecipes />} />
+        <Route path="/sweet-recipes" element={<SweetRecipes />} />
       </Routes>
     
     </Router>
