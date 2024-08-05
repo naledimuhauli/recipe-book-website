@@ -8,7 +8,7 @@ import sweet2 from './images/sweet2.jpg';
 import sweet3 from './images/sweet3.jpg';
 import './recipedetails.css';
 
-
+// Object containing savoury and sweet recipes with their details
 const recipes = {
     savoury: [
         {
@@ -58,13 +58,21 @@ const recipes = {
     ]
 };
 
+// RecipeDetail component to display detailed information about a selected recipe
 const RecipeDetail = () => {
+
+    // Extracting the type (savoury or sweet) and index of the recipe from the URL parameters
     const { type, index } = useParams();
+
+    // useNavigate hook to programmatically navigate back to the previous page when the back button is clicked.
     const navigate = useNavigate();
+
+     // Selecting the appropriate recipe based on the type and index
     const recipe = recipes[type][index];
 
     return (
         <div className='container container-details'>
+            {/* Back button to navigate to the previous page */}
             <button onClick={() => navigate(-1)} className='btn btn-primary back-button'>Back</button>
             <h2 className='title'>{recipe.title}</h2>
             <img src={recipe.pictureUrl} alt={recipe.title} className='recipes-picture'/>
@@ -72,11 +80,14 @@ const RecipeDetail = () => {
             <h3 className='ingredients-h3'>Ingredients</h3>
             <ul className='ingredients'>
                 {recipe.ingredients.map((ingredient, idx) => (
+                    // ingredient: This is the current element of the array being processed. For each iteration, it holds the value of the ingredient
                     <li key={idx}>{ingredient}</li>
+                    // idx: This is the index of the current element being processed in the array. It’s passed as the second argument to the callback function.
                 ))}
             </ul>
             <h3 className='steps-h3'>Steps</h3>
             <ol className='steps'>
+            {/* map Method: Similar to the ingredients, the map method is used here to iterate over each step in the steps array. */}
                 {recipe.steps.map((step, idx) => (
                     <li key={idx}>{step}</li>
                 ))}
