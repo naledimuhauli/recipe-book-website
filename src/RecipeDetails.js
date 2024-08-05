@@ -69,13 +69,13 @@ const RecipeDetail = () => {
             <h2 className='title'>{recipe.title}</h2>
             <p className='description'>{recipe.description}</p>
             <img src={recipe.pictureUrl} alt={recipe.title} className='recipe-picture'/>
-            <h3>Ingredients</h3>
+            <h3 className='ingredients-h3'>Ingredients</h3>
             <ul className='ingredients'>
                 {recipe.ingredients.map((ingredient, idx) => (
                     <li key={idx}>{ingredient}</li>
                 ))}
             </ul>
-            <h3>Steps</h3>
+            <h3 className='steps-h3'>Steps</h3>
             <ol className='steps'>
                 {recipe.steps.map((step, idx) => (
                     <li key={idx}>{step}</li>
