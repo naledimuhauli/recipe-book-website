@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Link } from 'react-router-dom';
 import savoury1 from './images/savoury1.jpg';
 import savoury2 from './images/savoury2.jpg';
 import savoury3 from './images/savoury3.jpg';
@@ -59,7 +60,9 @@ const RecipeList = () => {
                                 <h3 className='savoury-h1'>{recipe.title}</h3>
                                 <p className='savoury-p'>{recipe.description}</p>
                                 <img src={recipe.pictureUrl} alt={recipe.pictureUrl}  className='recipe-img'/>
+                                {/* <Link to={`/recipe/savoury/${index}`}> */}
                                 <button className='savoury-btn'>View Recipe</button>
+                            {/* </Link> */}
                             </div>
                         </div>
                     ))}
@@ -74,7 +77,9 @@ const RecipeList = () => {
                                 <h3 className='savoury-h1'>{recipe.title}</h3>
                                 <p className='savoury-p'>{recipe.description}</p>
                                 <img src={recipe.pictureUrl} alt={recipe.pictureUrl} className='recipe-img'/>
+                                {/* <Link to={`/recipe/sweet/${index}`}> */}
                                 <button className='savoury-btn'>View Recipe</button>
+                            {/* </Link> */}
                             </div>
                         </div>
                     ))}

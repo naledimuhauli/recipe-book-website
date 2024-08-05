@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RecipeList from './recipe-list';
+import RecipeList from './Recipe-list';
 import Navbar from './Navbar';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
@@ -19,28 +19,28 @@ function App() {
     <AboutUs />
     <RecipeList />
     <Footer />
-    
+
     </>
   );
 }
 
 export default App;
 
-// src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import RecipeDetails from './RecipeDetails';
-import './App.css'
+// // src/App.js
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import RecipeDetails from './RecipeDetails';
+// import './App.css'
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/recipe/:id" element={<RecipeDetails />} />
-      </Routes>
-    </Router>
-  );
-}
+// function App() {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/recipe/:id" element={<RecipeDetails />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
 
 
 
