@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { Link } from 'react-router-dom';
 import savoury1 from './images/savoury1.jpg';
 import savoury2 from './images/savoury2.jpg';
 import savoury3 from './images/savoury3.jpg';
@@ -10,42 +10,16 @@ import sweet2 from './images/sweet2.jpg';
 import sweet3 from './images/sweet3.jpg';
 
 const RecipeList = () => {
-    // State for savoury recipes
     const [savouryRecipes] = useState([
-        {
-            title: 'Spaghetti Carbonara',
-            description: 'A classic Italian pasta dish.',
-            pictureUrl: savoury1
-        },
-        {
-            title: 'Chicken Curry',
-            description: 'A spicy and flavorful chicken curry.',
-            pictureUrl: savoury2
-        },
-        {
-            title: 'Pork Ribs',
-            description: 'Pork ribs are tender, flavorful, and perfect for grilling or slow cooking.',
-            pictureUrl: savoury3
-        }
+        { title: 'Spaghetti Carbonara', description: 'A classic Italian pasta dish.', pictureUrl: savoury1 },
+        { title: 'Chicken Curry', description: 'A spicy and flavorful chicken curry.', pictureUrl: savoury2 },
+        { title: 'Pork Ribs', description: 'Pork ribs are tender, flavorful, and perfect for grilling or slow cooking.', pictureUrl: savoury3 }
     ]);
 
-    // State for sweet recipes
     const [sweetRecipes] = useState([
-        {
-            title: 'Chocolate Chip Cookies',
-            description: 'Delicious cookies with chocolate chips.',
-            pictureUrl: sweet1
-        },
-        {
-            title: 'Cheesecake',
-            description: 'A rich and creamy cheesecake.',
-            pictureUrl: sweet2
-        },
-        {
-            title: 'Tiramisu',
-            description: 'A classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.',
-            pictureUrl: sweet3
-        }
+        { title: 'Chocolate Chip Cookies', description: 'Delicious cookies with chocolate chips.', pictureUrl: sweet1 },
+        { title: 'Cheesecake', description: 'A rich and creamy cheesecake.', pictureUrl: sweet2 },
+        { title: 'Tiramisu', description: 'A classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.', pictureUrl: sweet3 }
     ]);
 
     return (
@@ -55,38 +29,35 @@ const RecipeList = () => {
                 <h1 className='savoury-dishes'>Savoury Dishes</h1>
                 <div className='savoury'>
                     {savouryRecipes.map((recipe, index) => (
-                        <div className='row row-recipe'>
-                            <div className='col' key={index}>
+                        <div className='row row-recipe' key={index}>
+                            <div className='col'>
                                 <h3 className='savoury-h1'>{recipe.title}</h3>
                                 <p className='savoury-p'>{recipe.description}</p>
-                                <img src={recipe.pictureUrl} alt={recipe.pictureUrl}  className='recipe-img'/>
-                                {/* <Link to={`/recipe/savoury/${index}`}> */}
-                                <button className='savoury-btn'>View Recipe</button>
-                            {/* </Link> */}
+                                <img src={recipe.pictureUrl} alt={recipe.title} className='recipe-img'/>
+                                <Link to={`/recipe/savoury/${index}`}>
+                                    <button className='savoury-btn'>View Recipe</button>
+                                </Link>
                             </div>
                         </div>
                     ))}
                 </div>
-
-
                 <h1 className='savoury-dishes'>Sweet Dishes</h1>
                 <div className='savoury'>
                     {sweetRecipes.map((recipe, index) => (
-                        <div className='row row-recipe'>
-                            <div className='col' key={index}>
+                        <div className='row row-recipe' key={index}>
+                            <div className='col'>
                                 <h3 className='savoury-h1'>{recipe.title}</h3>
                                 <p className='savoury-p'>{recipe.description}</p>
-                                <img src={recipe.pictureUrl} alt={recipe.pictureUrl} className='recipe-img'/>
-                                {/* <Link to={`/recipe/sweet/${index}`}> */}
-                                <button className='savoury-btn'>View Recipe</button>
-                            {/* </Link> */}
+                                <img src={recipe.pictureUrl} alt={recipe.title} className='recipe-img'/>
+                                <Link to={`/recipe/sweet/${index}`}>
+                                    <button className='savoury-btn'>View Recipe</button>
+                                </Link>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
         </div>
-
     );
 };
 

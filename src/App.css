@@ -7,9 +7,9 @@ body {
 }
 
 
-.App {
+.App-header {
   background-image: url(./images/background.jpg);
-  background-size: cover;
+ background-size: contain;
 }
 
 .header .heading1 {
@@ -41,7 +41,7 @@ body {
     font-size: 40px;
   }
 
-  .App {
+  .App-header {
     background-size: cover;
   }
 }

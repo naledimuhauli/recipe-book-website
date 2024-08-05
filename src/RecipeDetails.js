@@ -1,4 +1,3 @@
-// RecipeDetail.js
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import savoury1 from './images/savoury1.jpg';
@@ -7,7 +6,7 @@ import savoury3 from './images/savoury3.jpg';
 import sweet1 from './images/sweet1.jpg';
 import sweet2 from './images/sweet2.jpg';
 import sweet3 from './images/sweet3.jpg';
-import './App.css';
+
 
 const recipes = {
     savoury: [
@@ -15,22 +14,22 @@ const recipes = {
             title: 'Spaghetti Carbonara',
             description: 'A classic Italian pasta dish.',
             pictureUrl: savoury1,
-            ingredients: 'Spaghetti, Eggs, Pancetta, Parmesan cheese, Pepper',
-            steps: 'Cook pasta, mix with sauce, and serve.'
+            ingredients: ['Spaghetti', 'Eggs', 'Parmesan cheese', 'Pancetta', 'Pepper'],
+            steps: ['Boil the spaghetti.', 'Fry the pancetta.', 'Mix eggs and cheese.', 'Combine all with spaghetti.']
         },
         {
             title: 'Chicken Curry',
             description: 'A spicy and flavorful chicken curry.',
             pictureUrl: savoury2,
-            ingredients: 'Chicken, Spices, Tomatoes, Onion, Garlic, Ginger',
-            steps: 'Cook chicken with spices, add tomatoes, and simmer.'
+            ingredients: ['Chicken', 'Curry powder', 'Onions', 'Tomatoes', 'Garlic', 'Ginger'],
+            steps: ['Cook onions, garlic, and ginger.', 'Add chicken and curry powder.', 'Add tomatoes and simmer.']
         },
         {
             title: 'Pork Ribs',
             description: 'Pork ribs are tender, flavorful, and perfect for grilling or slow cooking.',
             pictureUrl: savoury3,
-            ingredients: 'Pork ribs, BBQ sauce, Salt, Pepper',
-            steps: 'Season ribs, grill, and baste with BBQ sauce.'
+            ingredients: ['Pork ribs', 'BBQ sauce', 'Salt', 'Pepper', 'Garlic powder'],
+            steps: ['Season the ribs.', 'Cook the ribs slowly.', 'Add BBQ sauce and grill.']
         }
     ],
     sweet: [
@@ -38,41 +37,49 @@ const recipes = {
             title: 'Chocolate Chip Cookies',
             description: 'Delicious cookies with chocolate chips.',
             pictureUrl: sweet1,
-            ingredients: 'Flour, Butter, Sugar, Chocolate chips',
-            steps: 'Mix ingredients, bake, and enjoy.'
+            ingredients: ['Flour', 'Sugar', 'Butter', 'Chocolate chips', 'Eggs', 'Vanilla extract'],
+            steps: ['Mix dry ingredients.', 'Cream butter and sugar.', 'Combine all and add chips.', 'Bake.']
         },
         {
             title: 'Cheesecake',
             description: 'A rich and creamy cheesecake.',
             pictureUrl: sweet2,
-            ingredients: 'Cream cheese, Sugar, Eggs, Vanilla extract, Graham crackers',
-            steps: 'Mix ingredients, bake, and chill.'
+            ingredients: ['Cream cheese', 'Sugar', 'Eggs', 'Graham crackers', 'Butter', 'Vanilla extract'],
+            steps: ['Prepare the crust.', 'Mix cream cheese and sugar.', 'Add eggs and vanilla.', 'Bake and chill.']
         },
         {
             title: 'Tiramisu',
             description: 'A classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.',
             pictureUrl: sweet3,
-            ingredients: 'Ladyfingers, Coffee, Mascarpone cheese, Cocoa powder',
-            steps: 'Layer ladyfingers with coffee and mascarpone, dust with cocoa.'
+            ingredients: ['Ladyfingers', 'Coffee', 'Mascarpone cheese', 'Eggs', 'Sugar', 'Cocoa powder'],
+            steps: ['Dip ladyfingers in coffee.', 'Mix mascarpone and eggs.', 'Layer with ladyfingers.', 'Chill and serve.']
         }
     ]
 };
 
 const RecipeDetail = () => {
-    const { type, id } = useParams();
+    const { type, index } = useParams();
     const navigate = useNavigate();
-    const recipe = recipes[type][id];
+    const recipe = recipes[type][index];
 
     return (
-        <div className='container hero'>
-            <button className='btn btn-primary' onClick={() => navigate('/')}>Back to Recipes List</button>
-            <h1>{recipe.title}</h1>
-            <img src={recipe.pictureUrl} alt={recipe.title} className='recipe-img' />
+        <div className='container'>
+            <button onClick={() => navigate(-1)} className='btn btn-primary'>Back</button>
+            <h2>{recipe.title}</h2>
             <p>{recipe.description}</p>
-            <h2>Ingredients</h2>
-            <p>{recipe.ingredients}</p>
-            <h2>Preparation Steps</h2>
-            <p>{recipe.steps}</p>
+            <img src={recipe.pictureUrl} alt={recipe.title} className='recipe-img'/>
+            <h3>Ingredients</h3>
+            <ul>
+                {recipe.ingredients.map((ingredient, idx) => (
+                    <li key={idx}>{ingredient}</li>
+                ))}
+            </ul>
+            <h3>Steps</h3>
+            <ol>
+                {recipe.steps.map((step, idx) => (
+                    <li key={idx}>{step}</li>
+                ))}
+            </ol>
         </div>
     );
 };
