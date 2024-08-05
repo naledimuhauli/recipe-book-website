@@ -4,12 +4,33 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
-    background: lightblue;
-    text-decoration: center;
+    background: black;
+    text-align: center;
+    align-items: center;
 }
 title{
     line-height: 1.2;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+}
+.descriptions{
+    font-size: 30px;
+  padding-top: 5px;
+  color: lightblue;
+}
+.ingredients{
+    align-items: center;
+  font-size: 20px;
+  color: lightblue;
+}
+.ingredients-h3{
+    color: blue;
+    font-size: 50px;
+    align-items: center;
+}
+.steps-h3{
+    color: blue;
+    font-size: 50px;
+    
 }
 
