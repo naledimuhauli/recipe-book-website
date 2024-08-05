@@ -6,6 +6,7 @@ import savoury3 from './images/savoury3.jpg';
 import sweet1 from './images/sweet1.jpg';
 import sweet2 from './images/sweet2.jpg';
 import sweet3 from './images/sweet3.jpg';
+import './recipedetails.css';
 
 
 const recipes = {
@@ -65,17 +66,17 @@ const RecipeDetail = () => {
     return (
         <div className='container'>
             <button onClick={() => navigate(-1)} className='btn btn-primary'>Back</button>
-            <h2>{recipe.title}</h2>
-            <p>{recipe.description}</p>
-            <img src={recipe.pictureUrl} alt={recipe.title} className='recipe-img'/>
+            <h2 className='title'>{recipe.title}</h2>
+            <p className='description'>{recipe.description}</p>
+            <img src={recipe.pictureUrl} alt={recipe.title} className='recipe-picture'/>
             <h3>Ingredients</h3>
-            <ul>
+            <ul className='ingredients'>
                 {recipe.ingredients.map((ingredient, idx) => (
                     <li key={idx}>{ingredient}</li>
                 ))}
             </ul>
             <h3>Steps</h3>
-            <ol>
+            <ol className='steps'>
                 {recipe.steps.map((step, idx) => (
                     <li key={idx}>{step}</li>
                 ))}
