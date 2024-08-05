@@ -64,11 +64,11 @@ const RecipeDetail = () => {
     const recipe = recipes[type][index];
 
     return (
-        <div className='container'>
-            <button onClick={() => navigate(-1)} className='btn btn-primary'>Back</button>
+        <div className='container container-details'>
+            <button onClick={() => navigate(-1)} className='btn btn-primary back-button'>Back</button>
             <h2 className='title'>{recipe.title}</h2>
+            <img src={recipe.pictureUrl} alt={recipe.title} className='recipes-picture'/>
             <p className='description'>{recipe.description}</p>
-            <img src={recipe.pictureUrl} alt={recipe.title} className='recipe-picture'/>
             <h3 className='ingredients-h3'>Ingredients</h3>
             <ul className='ingredients'>
                 {recipe.ingredients.map((ingredient, idx) => (
