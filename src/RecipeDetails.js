@@ -27,33 +27,120 @@ const recipes = {
         },
         {
             title: 'Pork Ribs',
-            description: 'To-die for Pork Ribs recipe with fall apart meat slathered in a sticky homemade barbecue sauce',
+            description: 'To-die for Pork Ribs recipe with fall-apart meat slathered in a sticky homemade barbecue sauce.',
             pictureUrl: savoury3,
-            ingredients: ['Worcestershire sauce', 'sugar', 'garlic', 'mustard', 'molasses', 'ketchup', 'cider vinegar', 'paprika', 'thye,cayenne pepper'],
-            steps: ['Rub the pork rins with the spices', 'Add cidder vinegar', 'Place your kitchen foil and close your ribs and let them bake at 280 degrees for about 20mins', 'Layer your ribs with the homemade barbecue sauce and place it back in the oven on low heat for about3-5 mins', 'Its ready to serve and enjoy.']
+            ingredients: [
+                '2 racks of pork ribs (about 4 pounds)',
+                '1/2 cup Worcestershire sauce',
+                '1/2 cup brown sugar',
+                '2 cloves garlic, minced',
+                '2 tablespoons Dijon mustard',
+                '1/4 cup molasses',
+                '1 cup ketchup',
+                '1/4 cup apple cider vinegar',
+                '1 tablespoon paprika',
+                '1 teaspoon dried thyme',
+                '1 teaspoon cayenne pepper (optional, for heat)',
+                'Salt and pepper to taste'
+            ],
+            steps: [
+                'Preheat your oven to 280°F (138°C).',
+                'Remove the silver skin from the back of the ribs if it’s still attached.',
+                'In a small bowl, combine paprika, dried thyme, cayenne pepper (if using), salt, and pepper. Rub this mixture evenly over both sides of the ribs.',
+                'In a medium saucepan, combine Worcestershire sauce, brown sugar, minced garlic, Dijon mustard, molasses, ketchup, and apple cider vinegar.',
+                'Simmer over medium heat for 10-15 minutes, stirring occasionally, until the sauce thickens slightly.',
+                'Place the seasoned ribs on a large piece of aluminum foil. Wrap the ribs tightly in the foil.',
+                'Bake in the preheated oven for about 2.5 to 3 hours, or until the ribs are tender.',
+                'Remove the ribs from the oven and carefully unwrap them.',
+                'Brush a generous amount of the homemade barbecue sauce over the ribs.',
+                'For a caramelized finish, place the sauced ribs under a broiler for 3-5 minutes, watching closely to avoid burning.',
+                'Let the ribs rest for a few minutes before slicing. Serve with additional barbecue sauce on the side.'
+            ]
         }
+
     ],
     sweet: [
         {
             title: 'Chocolate Chip Cookies',
             description: 'Delicious cookies with chocolate chips.',
             pictureUrl: sweet1,
-            ingredients: ['Flour', 'Sugar', 'Butter', 'Chocolate chips', 'Eggs', 'Vanilla extract'],
-            steps: ['Mix dry ingredients.', 'Cream butter and sugar.', 'Combine all and add chips.', 'Bake.']
+            ingredients: [
+                '2 1/4 cups all-purpose flour',
+                '1/2 teaspoon baking soda',
+                '1 cup unsalted butter, room temperature',
+                '1/2 cup granulated sugar',
+                '1 cup packed brown sugar',
+                '1 teaspoon salt',
+                '2 teaspoons vanilla extract',
+                '2 large eggs',
+                '2 cups semisweet chocolate chips'
+            ],
+            steps: [
+                'Preheat oven to 350°F (175°C).',
+                'In a small bowl, whisk together flour and baking soda; set aside.',
+                'In a large bowl, beat the butter, granulated sugar, brown sugar, and salt until creamy.',
+                'Add vanilla extract and eggs; beat well.',
+                'Gradually beat in the flour mixture.',
+                'Stir in the chocolate chips.',
+                'Drop rounded tablespoons of dough onto ungreased baking sheets.',
+                'Bake for 10 to 12 minutes or until golden brown.',
+                'Cool on baking sheets for a few minutes, then transfer to wire racks to cool completely.'
+            ]
         },
         {
             title: 'Cheesecake',
-            description: 'A rich and creamy cheesecake.',
+            description: 'A rich and creamy cheesecake with a graham cracker crust.',
             pictureUrl: sweet2,
-            ingredients: ['Cream cheese', 'Sugar', 'Eggs', 'Graham crackers', 'Butter', 'Vanilla extract'],
-            steps: ['Prepare the crust.', 'Mix cream cheese and sugar.', 'Add eggs and vanilla.', 'Bake and chill.']
+            ingredients: [
+                '1 1/2 cups graham cracker crumbs',
+                '1/4 cup granulated sugar',
+                '1/2 cup unsalted butter, melted',
+                '4 packages (8 oz each) cream cheese, softened',
+                '1 cup granulated sugar',
+                '1 teaspoon vanilla extract',
+                '4 large eggs',
+                '1 cup sour cream',
+                '1 cup heavy cream'
+            ],
+            steps: [
+                'Preheat oven to 325°F (163°C).',
+                'Combine graham cracker crumbs, sugar, and melted butter in a bowl. Press the mixture into the bottom of a springform pan.',
+                'In a large bowl, beat the cream cheese until smooth.',
+                'Add sugar and vanilla extract; beat until well combined.',
+                'Add eggs one at a time, beating well after each addition.',
+                'Add sour cream and heavy cream; mix until smooth.',
+                'Pour the filling over the crust in the springform pan.',
+                'Bake for 50 to 60 minutes or until the center is set and the edges are lightly golden.',
+                'Turn off the oven and let the cheesecake cool inside with the door slightly open for 1 hour.',
+                'Refrigerate for at least 4 hours or overnight before serving.'
+            ]
         },
         {
             title: 'Tiramisu',
             description: 'A classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.',
             pictureUrl: sweet3,
-            ingredients: ['Ladyfingers', 'Coffee', 'Mascarpone cheese', 'Eggs', 'Sugar', 'Cocoa powder'],
-            steps: ['Dip ladyfingers in coffee.', 'Mix mascarpone and eggs.', 'Layer with ladyfingers.', 'Chill and serve.']
+            ingredients: [
+                '6 large egg yolks',
+                '3/4 cup granulated sugar',
+                '1 cup heavy cream',
+                '1 cup mascarpone cheese, room temperature',
+                '1 cup strong brewed coffee, cooled',
+                '1/2 cup coffee liqueur (optional)',
+                '24 to 30 ladyfingers',
+                '2 tablespoons cocoa powder, for dusting'
+            ],
+            steps: [
+                'In a large bowl, whisk together egg yolks and sugar until pale and thick.',
+                'In a separate bowl, beat heavy cream until stiff peaks form.',
+                'Fold mascarpone cheese into the egg yolk mixture until smooth.',
+                'Gently fold in the whipped cream.',
+                'Combine coffee and coffee liqueur (if using) in a shallow dish.',
+                'Dip ladyfingers quickly into the coffee mixture, then arrange in a single layer in the bottom of a serving dish.',
+                'Spread half of the mascarpone mixture over the ladyfingers.',
+                'Add another layer of dipped ladyfingers and top with the remaining mascarpone mixture.',
+                'Cover and refrigerate for at least 4 hours, or overnight for best flavor.',
+                'Dust with cocoa powder before serving.'
+            ]
         }
     ]
 };
