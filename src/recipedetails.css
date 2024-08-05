@@ -8,6 +8,11 @@ body{
     text-align: center;
     align-items: center;
 }
+.container{
+    align-items: center;
+    color: lightblue;
+    font-size: 25px;
+}
 title{
     line-height: 1.2;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -33,4 +38,9 @@ title{
     font-size: 50px;
     
 }
+.steps{
+    align-items: center;
+    color: lightblue;
+}
+
 
